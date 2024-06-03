@@ -1,1 +1,1 @@
-# Wals-Caffee-Restaurant-
+# Wals-Caffee-Restaurant
