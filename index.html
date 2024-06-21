@@ -1,158 +1,106 @@
-
-
 <!DOCTYPE html>
-<html>
-    <head>
-      <html lang="en">
-
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Restaurant Wals </title>
+    <title>Restaurant Walid</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-gray-800 text-white">
 
-    <!---- CSS file -->
-   
-        <title>café Walid</title>
-        <link rel="stylesheet" type="text/css" href="index.css">
-    </head>
-    
-    <body>
-   <!--Header-->
-        <div id="header" >
-            <nav>
-                <ul>
-                    <li><a href="#header">Home</a></li>
-                    <li><a href="#">Menu</a>
-                        <ul class="language">
-                            <div class="a"><li><a href="#food">Foods </a></li></div>
-                            <div class="a"><li><a href="#drink">Drinks </a></li></div>
-                        </ul>
-                    </li>
-            
-                    <li><a href="#contact">Contact</a></li>
+<!-- Header -->
+<div id="header" class="h-screen bg-cover bg-center" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSejOrAZ4h5T50kbIKrmGCxSunJx8TJ95QvgA&usqp=CAU');">
+    <nav class="fixed w-full bg-gray-900 bg-opacity-50 z-50">
+        <ul class="flex justify-center space-x-10 py-4">
+            <li><a href="#header" class="hover:text-cyan-500">Home</a></li>
+            <li class="relative group">
+                <a href="#" class="hover:text-cyan-500">Menu</a>
+                <ul class="absolute left-0 mt-2 w-40 bg-gray-900 bg-opacity-90 rounded hidden group-hover:block">
+                    <li class="py-2 px-4 hover:bg-cyan-700"><a href="#food">Foods</a></li>
+                    <li class="py-2 px-4 hover:bg-cyan-700"><a href="#drink">Drinks</a></li>
                 </ul>
-            </nav>
-             
-           <h1>HAPPY CAFE</h1> 
-        </div>
-        
-        
-        <div>
+            </li>
+            <li><a href="#contact" class="hover:text-cyan-500">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="flex items-center justify-center h-full">
+        <h1 class="text-6xl md:text-8xl lg:text-9xl font-serif">HAPPY CAFE</h1>
+    </div>
+</div>
+
+<!-- Menu -->
+<div>
+    <h2 class="text-center text-4xl font-serif my-10">Menu</h2>
+
     <!-- Food Menu -->
-        <h2 class="menu">Menu</h2>
-            <div id="food">
-                <h2>Food Menu</h2>
-                <center>
-                <div class="flist">
-                    <h3>BURGER</h3>
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdt754ImCpd5oUH577q-v2QgltEglmDMgScw&usqp=CAU" alt="burger">
-                    <h4>8.00$</h4>
-                    <button onclick="alert('Order Accepted')">Order Now</button>
-                </div>
-                
-                
-                <div class="flist">
-                    <h3>PIZZA</h3>
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnf0LeYPYecIKu4chueli8BIjLjgKBBCb7Lg&usqp=CAU" alt="pizza">
-                    <h4>10.00$</h4>
-                    <button onclick="alert('Order Accepted')">Order Now</button>
-                </div>
-                
-                
-                <div class="flist">
-                    <h3>WAFFLE</h3>
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY3YbH1h8vHzScm2x124gC3Fk7v2Hef2Hegw&usqp=CAU" alt="waffle">
-                     <h4>7.50$</h4>
-                    <button onclick="alert('Order Accepted')">Order Now</button>
-                </div>
-                    
-                    <div class="flist">
-                    <h3>PANCAKE</h3>
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRY06X1SyQKRIRaDTH-BgGPcGw9qApoe0X9aA&usqp=CAU" alt="waffle">
-                    <h4>5.00$</h4>
-                    <button onclick="alert('Order Accepted')">Order Now</button>
-                    </div>
-                    
-                    
-                    <div class="flist">
-                    <h3>CAKE</h3>
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQW_hIVCMg8lNyu4ovzPcE6Rsn-Ej5DTrdUwg&usqp=CAU" alt="waffle">
-                    <h4>9.00$</h4>
-                    <button onclick="alert('Order Accepted')">Order Now</button>
-                    </div>
-                    
-                    
-                </center>
-                </div>
+    <div id="food" class="mb-16 px-4">
+        <h2 class="text-center text-3xl bg-cyan-600 py-2 rounded-lg mb-6">Food Menu</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="flist p-4 bg-gray-900 rounded-lg text-center transform transition-transform duration-500 hover:scale-105">
+                <h3 class="text-2xl mb-4">BURGER</h3>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdt754ImCpd5oUH577q-v2QgltEglmDMgScw&usqp=CAU" alt="burger" class="w-full h-64 object-cover rounded-lg mb-4">
+                <h4 class="text-xl mb-4 text-yellow-400">$8.00</h4>
+                <button class="bg-cyan-600 hover:bg-cyan-700 text-white py-2 px-6 rounded-lg transform transition-transform duration-300 hover:scale-110" onclick="alert('Order Accepted')">Order Now</button>
             </div>
-            
-            
-            
-    <!-- drinks Menu -->
-            <div id="drink">
-                <h2>Drinks Menu</h2>
-                <center>
-                <div class="flist">
-                    <h3>ESPRESSO</h3>
-                    <img src="https://media.istockphoto.com/id/545335342/photo/coffee-espresso-in-white-background.jpg?s=170667a&w=0&k=20&c=HwMb50CqrDXuXnARCw4rJPt0YddeepHHZx1QkvVrSLg=" alt="burger">
-                    <h4>1.25$</h4>
-                    <button onclick="alert('Order Accepted')">Order Now</button>
-                </div>
-                
-                
-                <div class="flist">
-                    <h3>CAPPUCCINO</h3>
-                    <img src="https://img.freepik.com/premium-photo/close-up-shot-latte-coffee-with-latte-art-ceramic-white-cup-saucer-white-background_659151-1130.jpg" alt="burger">
-                    <h4>3.75$</h4>
-                    <button onclick="alert('Order Accepted')">Order Now</button>
-                </div>
-                
-                
-                <div class="flist">
-                    <h3>LATHA</h3>
-                    <img src="https://img.freepik.com/premium-photo/coffee-cup-art-latte-with-froth-heart-shaped-isolated-white-background-with-clipping-path_158502-351.jpg?w=2000" alt="burger">
-                    <h4>2.25$</h4>
-                    <button onclick="alert('Order Accepted')">Order Now</button>
-                </div>
-                <div class="flist">
-                    <h3>AMERICANO</h3>
-                    <img src="https://media.istockphoto.com/id/1301137165/photo/glass-cup-of-espresso-coffee-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=MmyrPzuoGea3k1YQDtKdeGnZTU9eYZp0Z0fL0q9FWO0=" alt="burger">
-                    <h4>3.50$</h4>
-                    <button onclick="alert('Order Accepted')">Order Now</button>
-                </div>
-                <div class="flist">
-                    <h3>GREEN TEA</h3>
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSnnZfDW0rCU-vbq4hke0RaCCxv6q04qRdvw&usqp=CAU" alt="burger">
-                    <h4>1.75$</h4>
-                    <button onclick="alert('Order Accepted')">Order Now</button>
-                </div>
-                </center>
+
+      
+            <div class="flist p-4 bg-gray-900 rounded-lg text-center transform transition-transform duration-500 hover:scale-105">
+                <h3 class="text-2xl mb-4">PIZZA</h3>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnf0LeYPYecIKu4chueli8BIjLjgKBBCb7Lg&usqp=CAU" alt="pizza" class="w-full h-64 object-cover rounded-lg mb-4">
+                <h4 class="text-xl mb-4 text-yellow-400">$10.00</h4>
+                <button class="bg-cyan-600 hover:bg-cyan-700 text-white py-2 px-6 rounded-lg transform transition-transform duration-300 hover:scale-110" onclick="alert('Order Accepted')">Order Now</button>
             </div>
         </div>
-        
-        <div id="contact">
-            <h2 class="menu">Contact Page</h2>
-            <center>
-            <form>
-                <div class="inputbox">
-                    <input type="text" required="required">
-                    <span>Username</span>
-                    <i></i>
-                </div>
-                <div class="inputbox">
-                    <input type="email" required="required">
-                    <span>Email</span>
-                    <i></i></div>
-                <div class="inputbox">
-                    <input type="textarea" required="required">
-                    <span>Message</span>
-                    <i></i>
-                </div>
-                <input type="submit" value="Send" onclick='alert("Your Message is Sent Successfully.")' >
-                
-             
-                </form>
-                </center>
-                <div><p class="copyrights"><small>all copyrights belongs to Eng. Walid R.&copy</small></p></div>
+    </div>
+
+    <!-- Drinks Menu -->
+    <div id="drink" class="mb-16 px-4">
+        <h2 class="text-center text-3xl bg-cyan-600 py-2 rounded-lg mb-6">Drinks Menu</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="flist p-4 bg-gray-900 rounded-lg text-center transform transition-transform duration-500 hover:scale-105">
+                <h3 class="text-2xl mb-4">ESPRESSO</h3>
+                <img src="https://media.istockphoto.com/id/545335342/photo/coffee-espresso-in-white-background.jpg?s=170667a&w=0&k=20&c=HwMb50CqrDXuXnARCw4rJPt0YddeepHHZx1QkvVrSLg=" alt="espresso" class="w-full h-64 object-cover rounded-lg mb-4">
+                <h4 class="text-xl mb-4 text-yellow-400">$1.25</h4>
+                <button class="bg-cyan-600 hover:bg-cyan-700 text-white py-2 px-6 rounded-lg transform transition-transform duration-300 hover:scale-110" onclick="alert('Order Accepted')">Order Now</button>
+            </div>
+
+          
+            <div class="flist p-4 bg-gray-900 rounded-lg text-center transform transition-transform duration-500 hover:scale-105">
+                <h3 class="text-2xl mb-4">CAPPUCCINO</h3>
+                <img src="https://img.freepik.com/premium-photo/close-up-shot-latte-coffee-with-latte-art-ceramic-white-cup-saucer-white-background_659151-1130.jpg" alt="cappuccino" class="w-full h-64 object-cover rounded-lg mb-4">
+                <h4 class="text-xl mb-4 text-yellow-400">$3.75</h4>
+                <button class="bg-cyan-600 hover:bg-cyan-700 text-white py-2 px-6 rounded-lg transform transition-transform duration-300 hover:scale-110" onclick="alert('Order Accepted')">Order Now</button>
+            </div>
         </div>
-    </body>
-</html>
+    </div>
+</div>
+
+<!-- Contact -->
+<div id="contact" class="mb-16 px-4">
+    <h2 class="text-center text-4xl font-serif mb-10">Contact Page</h2>
+    <center>
+        <form class="grid gap-4 w-full md:w-1/2">
+            <div class="inputbox relative">
+                <input type="text" required class="w-full p-4 bg-transparent border border-gray-700 rounded-lg focus:outline-none focus:border-cyan-500 text-black">
+                <span class="absolute left-4 top-4 text-gray-400 transition-transform duration-300 transform -translate-y-6 scale-75 origin-top-left">Username</span>
+                <i class="absolute left-4 bottom-0 w-full h-1 bg-crimson rounded transition-transform duration-300 transform scale-0 origin-bottom-left"></i>
+            </div>
+            <div class="inputbox relative">
+                <input type="email" required class="w-full p-4 bg-transparent border border-gray-700 rounded-lg focus:outline-none focus:border-cyan-500 text-black">
+                <span class="absolute left-4 top-4 text-gray-400 transition-transform duration-300 transform -translate-y-6 scale-75 origin-top-left">Email</span>
+                <i class="absolute left-4 bottom-0 w-full h-1 bg-crimson rounded transition-transform duration-300 transform scale-0 origin-bottom-left"></i>
+            </div>
+            <div class="inputbox relative">
+                <textarea required class="w-full p-4 bg-transparent border border-gray-700 rounded-lg focus:outline-none focus:border-cyan-500 text-black"></textarea>
+                <span class="absolute left-4 top-4 text-gray-400 transition-transform duration-300 transform -translate-y-6 scale-75 origin-top-left">Message</span>
+                <i class="absolute left-4 bottom-0 w-full h-1 bg-crimson rounded transition-transform duration-300 transform scale-0 origin-bottom-left"></i>
+            </div>
+            <input type="submit" value="Send" class="bg-crimson text-white py-2 px-6 rounded-lg cursor-pointer hover:bg-red-700 transform transition-transform duration-300 hover:scale-110" onclick='alert("Your Message is Sent Successfully.")'>
+            <div class="text-center mt-10">
+                <small class="block">&copy; All copyrights belong to Eng. Walid R.</small>
+            </div>
