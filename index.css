@@ -64,15 +64,19 @@ ul {
   padding: 20px;
   border-radius: 5px;
 }
-h1 {
-  text-align: center;
-  margin-top: 60%;
-  margin-left: 10px;
-  font-size: 60px;
-  font-family: serif;
-  color: white;
-  display: inline-block;
+
+
+  h1 {
+    font-size: 8vw;
+    font-family: serif;
+    color: white;
+    margin: auto;
+    
+    width: fit-content;
+    text-align: center;
+    display: flex;
 }
+
 #header {
   display: grid;
   background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSejOrAZ4h5T50kbIKrmGCxSunJx8TJ95QvgA&usqp=CAU")
